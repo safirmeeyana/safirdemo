@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <br>
+        {% for i in products %}
+        <div class="col-md-12>">
+<div class="card" style="width:23rem;">
+  <center><img class="card-img-top" src="{{i.img.url}}" alt="Card image cap" style="width:300px;height:300px"></center>
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.desc}}</p>
+    <a href="{% url 'myapp:detail' i.id%}" class="btn btn-primary">Go details</a>
+
+  </div>
+</div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}
+
+

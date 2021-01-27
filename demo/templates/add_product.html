@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<form class="text-center" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="product name"><br>
+    <input type="text" name="desc" placeholder="product description"><br>
+    <input type="text" name="price" placeholder="product price"><br>
+    <input class="text-center" type="file" name="img" placeholder="product image"><br>
+    <input type="submit" value="ADD">
+    <a href="{% url 'myapp:demo' %}" class="btn btn-success">Go to home page</a>
+</form>
+{% endblock %}
